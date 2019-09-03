@@ -1,0 +1,5 @@
+/**app.wxss**/
+.container{
+  font-family:yahei;
+  color: black;
+}

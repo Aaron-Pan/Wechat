@@ -1,0 +1,33 @@
+<view class="container">
+    <view class='in-box'>
+    <view class='img-box'>
+      <image src='img/weituoxinxi.png'></image>
+      <text>当前还没有委托信息额~</text>
+    </view>
+
+    <view class='datail'> 
+    <text class='font' wx:for="{{item}}" bindtap='{{hanshu[index]}}' wx:key='unique'>{{item}}</text>
+    </view>
+
+    <view class='zuihou'>
+    <text class='fabu'>房源发布流程</text>
+    <view class='bottom-img'>
+     <!-- 图标显示进程 -->
+  <view class='head-box'>
+    <span class="iconfont icon-diannao"></span>
+    <view class="iconfont icon-jiantou-you"></view>
+    <span class="iconfont icon-dianhua"></span>
+    <view class="iconfont icon-jiantou-you"></view>
+    <span class="iconfont icon-fangyuanchaxun"></span>
+  </view>
+  <view class='raduce'>
+    <span>线上发布</span>
+    <span>电话核实</span>
+    <span>房源上架</span>
+  </view>
+  <!-- 图标显示进程部分结束 -->
+    </view>
+    </view>
+
+    </view>
+</view>

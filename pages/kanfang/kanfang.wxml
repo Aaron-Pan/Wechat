@@ -1,0 +1,48 @@
+<view class='topTabSwiper'>
+    <block wx:for="{{navlist}}" wx:key="index">
+    <view class='tab  {{currentData == index ? "tabBorer" : ""}}'  data-current = "{{index}}" bindtap='checkCurrent'>{{item.name}}</view>
+    </block>
+</view>
+<view class='kf'>
+<view class='kf_img'>
+<image src='img/kanfangjilu.png'>还没有看房记录~</image>
+</view>
+<view class='txt'><text>没有任何收藏房源~</text></view>
+</view>
+<view class='tuijian'>
+<text>为您推荐</text>
+</view>
+<swiper current="{{currentData}}" class='swiper' duration="300" bindchange="bindchange">
+  <block wx:for="{{content}}" wx:key="index">
+    <swiper-item>
+    <view class='swiper_con'>
+<!--推荐房源列表-->
+<!--2019年6月16日13:56:57
+实现：
+租房列表数据渲染-->
+<view class='tuijian_title'>
+<view class='tuijian_left' bindtap='details'>
+<image src='../index/pic/3.jpg'></image>
+</view>
+<view class='biaozhi'>此数据为模拟数据</view>
+<view class='leixing'>住房</view>
+<view class='xing'></view>
+<view class='tuijian_right' bindtap='details'>
+<view class='address'>花果园C区 精装两房，家具齐全拎包入住，采光好</view>
+
+ <view class='mianji'>
+ <view class='mj'>64㎡</view>
+ <view class='mj hu'>3室2厅</view>
+</view>
+<view class='tedian'>
+<view class='tedia'>南北通透</view>
+<view class='tedia ted'>采光好</view>
+<view class='tedia te ted'>交通方便</view>
+</view>
+<view class='salary'><span class="iconfont icon-zujin"></span><text class='sala'>2500 </text><text class='money'>元/月</text></view>
+</view>
+</view>
+    </view>
+    </swiper-item>
+  </block>
+</swiper>

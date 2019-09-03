@@ -1,0 +1,305 @@
+/**index.wxss**/
+@import '/pages/index/ico.wxss';
+swiper-container{
+  width: 100%;
+  height: 400rpx !important;
+}
+.swiper{
+  height: 400rpx !important;
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.menu-wrp {
+  width:100%;
+  margin-top:20rpx;
+  background-color: #fff;
+}
+.menu-wrp:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+ 
+.menu-list{
+    float:left;
+    width:20%;
+    box-sizing: border-box;
+    padding-bottom:10px;
+}
+ 
+.menu-img{
+   display:block;
+    width:90rpx;
+    height:90rpx;
+    margin:5% auto;
+}
+.menu-title{
+  text-align: center;
+    color:#333333;
+    width:100%;
+    line-height: 60rpx;
+    display:block;
+}
+.menu-desc{
+  font-size: 28rpx;
+  color: rgb(73, 72, 72);
+}
+
+.gap-1,.gap-2{
+    width:100%;
+    height:10rpx;
+}
+.zixun{
+  width: 100%;
+  height: 150rpx;
+  border-top: none;
+  box-shadow: 0 5rpx 4rpx 2rpx rgba(128, 128, 128, 0.115);
+}
+.zixun image{
+  width: 90rpx;
+  height: 38rpx;
+  margin-top: 7%;
+  margin-left: 5%;
+}
+.swiper_zixun{
+  color: gray;
+  width: 75%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  float: right;
+  margin-right:5%; 
+  margin-top: 4.5%;
+}
+.zixun_item{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.weituo{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  line-height: 100rpx;
+}
+.weituo_title{
+  text-indent: 1em;
+ font-size: 38rpx;
+}
+.weituoguanli{
+  margin-left: 51%;
+  float: right;
+  font-size: 28rpx;
+  color: gray;
+}
+.icon{
+  color: gray;
+}
+.zushou{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 350rpx;
+}
+.sale{
+  margin: 1% 0 0 3%;
+  line-height: 50rpx;
+  width: 45%;
+  height: 150rpx;
+  background-color: rgba(220, 220, 220, 0.233);
+}
+.sale_title{
+  float: left;
+  width: 45%;
+  padding-top: 5%;
+  text-indent: 0.5em;
+  font-size: 30rpx;
+}
+.sale_describel{
+  float: left;
+  width: 58%;
+  text-indent:0.5em;
+  color: gray;
+  font-size: 26rpx;
+}
+.sale_pic{
+  width: 100rpx;
+  height: 88rpx;
+  float: right;
+  margin-right:10%;
+}
+.tuijian{ 
+  display: flex;
+  margin-top:8%;
+  width:100%rpx;
+  height: 80rpx;
+}
+.tuijian_title{
+  float: left;
+  width: 50%;
+  text-indent: 1em;
+  font-size: 40rpx;
+  line-height: 80rpx;
+}
+.ershou{
+  width:100rpx;
+  height: 40rpx;
+  margin-top:8%;
+  line-height: 80rpx;
+  text-align: right;
+  font-size:30rpx;
+}
+.tuijian_zong{
+  font-size:28rpx;
+  margin: 3% 0 0 5%;
+  display: flex;
+  width: 89%;
+  height:260rpx;
+  border-bottom: 2rpx solid gainsboro;
+}
+.tuijian_left{
+  position: relative;
+  width:266rpx;
+  height: 200rpx;
+}
+.tuijian_left image{
+  margin-top: 10%;
+  margin-left: 24rpx;
+  width: 240rpx;
+  height: 180rpx;
+}
+.biaozhi{
+  margin-top: 38rpx;
+  margin-left:10rpx; 
+  line-height: 35rpx;
+  color: white;
+  position: absolute;
+  font-size: 24rpx;
+  width: 258rpx;
+  height:35rpx;
+  text-indent:0.7em;
+  background-color:rgba(0, 196, 130, 0.982); 
+}
+.leixing{
+  border-radius: 0 10rpx 0 10rpx; 
+  margin-top:172rpx;
+  margin-left: 25rpx;
+  line-height: 35rpx;
+  color: white;
+  position: absolute;
+  font-size: 21rpx;
+  width: 80rpx;
+  height: 35rpx;
+  background-color:rgba(59, 62, 70, 0.595); 
+}
+.xing{
+  margin-left:10rpx; 
+  margin-top: 72rpx;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 22rpx solid rgba(4, 155, 105, 0.982);
+  border-left:16rpx solid transparent;
+}
+.tuijian_right {
+  margin:2% 0 0 5%;
+  width:100%;
+  height: 200rpx;
+}
+.mianji{
+  display: flex;
+  color: grey;
+  margin-top: 10rpx;
+  font-size:26rpx;
+}
+.mj{ 
+  width: 110rpx;
+  height: 30rpx;
+  text-align:center;
+  line-height: 30rpx;
+  border-left: 2rpx solid gainsboro;
+  border-right: 2rpx solid gainsboro;
+}
+.address{
+  width: 95%;
+  height: 80rpx;
+  overflow: hidden;
+}
+.salary{
+  color: red;
+  margin-top: 10rpx;
+  font-size:30rpx; 
+}
+.sala{font-weight: bold;}
+.money{font-size: 20rpx;}
+.search{
+  width: 100%;
+  height:120rpx;
+  position: absolute;
+  top: 20rpx;
+  left: 0;
+}
+.sousuo{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top:15rpx;
+  margin-left:1%;
+  box-shadow: 0 0 10rpx 1rpx gray;
+  border-radius: 10rpx;
+  width: 98%;
+  height: 75rpx;
+  background-color: white;
+  line-height: 80rpx;
+  opacity: 0.7;
+}
+.sousuo span{
+ text-indent: 0.5em;
+}
+.sousuo input{
+  width: 85%;
+  height: 100%;
+  margin-left:15rpx;
+  font-size: 30rpx;
+}
+.tedia{
+  border-radius:6rpx; 
+  width: 100rpx;
+  height: 40rpx;
+  background-color:rgba(0, 196, 130, 0.182);
+  font-size: 20rpx;
+  color: #00c482;
+  text-align: center;
+  line-height: 40rpx;
+  margin-top:10rpx;
+}
+.tedian{
+display: flex;
+}
+.ted{
+  margin-left: 3%;
+  background-color:rgba(0, 196, 130, 0.182);
+  color:#00c482;
+}
+.te{
+  margin-left: 3%;
+  background-color:rgba(0, 196, 130, 0.182);
+  color:#00c482;
+}
+.show{
+  color: gray;
+  line-height:100rpx;
+  text-align:right;
+  flex:1;
+  font-size:32rpx;
+  opacity: 0.5;
+}
+.hidden{
+  color:#00c482;
+  line-height:100rpx;
+  text-align:right;
+  flex:1;
+  font-size:32rpx;
+}

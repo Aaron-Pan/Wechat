@@ -1,0 +1,150 @@
+@import "./font/iconfont.wxss";
+.con-box{
+  width: 100%;
+  height: 100%;
+  background: #ededed;
+}
+.head-box{
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  justify-content: start;
+}
+.raduce{
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.head-box span{
+  width: 25%;
+  height: 120rpx;
+  color: #666;
+  font-size:70rpx;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.head-box view{
+  width: 15%;
+  height: 120rpx;
+  font-size: 60rpx;
+  text-align: center;
+  color: #ccc;
+  margin-top: 50rpx;
+}
+.raduce span{
+  width: 25%;
+  height: 60rpx;
+  font-size:25rpx;
+  color: #666;
+  text-align: center;
+  line-height: 40rpx;
+}
+.biaodan{
+  width: 90%;
+  height: 60rpx;
+  background: white;
+  padding: 10rpx 5%;
+  margin-bottom: 1px;
+
+}
+form label{
+  float: left;
+  width: 28%;
+  font-size: 25rpx;
+  color: #666;
+  line-height: 60rpx;
+}
+.inp{
+  height: 60rpx;
+  font-size: 28rpx;
+  text-align: right;
+}
+.pla{
+  font-size: 25rpx;
+}
+.xing{
+  font-size: 28rpx;
+  color: red;
+  vertical-align: middle;
+  margin-left: 10rpx;
+}
+.inp-p{
+  float:right; 
+  height: 60rpx;
+  font-size: 28rpx;
+  text-align: right;
+}
+.sp{
+  width: 10%;
+  margin-left: 10rpx;
+  float: right;
+  font-size: 25rpx;
+  line-height: 60rpx;
+  text-align: right;
+}
+.change{
+  width: 100%;
+  height: 320rpx;
+  text-align: center;
+  position: absolute;
+  bottom: 80rpx;
+  z-index: 10;
+}
+.queding{
+  width: 100%;
+  height: 400rpx;
+  margin-bottom:0px; 
+  position: fixed;
+  background: white;
+  left: 0;
+  bottom: 0;
+  z-index: 5;
+}
+.btn{
+  width: 100%;
+  height: 80rpx;
+  font-size: 28rpx;
+  border-radius: 0;
+  background: #1AAC19;
+  color: white;
+  position: absolute;
+  bottom: 0;
+}
+.addimage{
+    width: 90%;
+    padding: 30rpx 5%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background: white;
+    
+}
+.addimage image{
+  width: 22%;
+  margin-right: 20rpx;
+  margin-top: 10rpx;
+  height: 150rpx;
+  background: black;
+}
+.last{
+  width: 100%;
+  height: 80rpx;
+  font-size: 28rpx;
+  background: red;
+  border-radius: 0;
+  margin-top: 150rpx;
+  color: white;
+  position: fixed;
+  bottom: 0;
+}
+.intro {
+  margin: 30rpx;
+  text-align: center;
+}
+.che{
+  width: 90%;
+  height: 260rpx;
+  padding: 0 10%;
+}

@@ -1,0 +1,29 @@
+<view class='topTabSwiper'>
+    <block wx:for="{{navlist}}" wx:key="index">
+    <view class='tab  {{currentData == index ? "tabBorer" : ""}}'  data-current = "{{index}}" bindtap='checkCurrent'>{{item.name}}</view>
+    </block>
+</view>
+<swiper current="{{currentData}}" class='swiper' style="height:600px;" duration="300" bindchange="bindchange">
+  <block wx:for="{{content}}" wx:key="index">
+    <swiper-item>
+    <view class='swiper_con'>
+    <!--资讯列表-->
+<view class='liebiao'>
+<view class='liebiao_left' bindtap='information_details'>
+<view class='liebiao_title'>佛山租房和无房提取住房公积金标准不变,无房提取最高6930元/年</view>
+<view class='liulan_time'>
+<view class='liebiao_time'><span class="iconfont icon-48copy11"></span> 6-16 10:23</view>
+<view class='liulan'><span class="iconfont icon-liulanliang"></span> 500浏览</view>
+</view>
+</view>
+
+<view class='liebiao_img'>
+<image src='pic/slide3.jpg'></image>
+</view>
+
+</view>
+
+    </view>
+    </swiper-item>
+  </block>
+</swiper>

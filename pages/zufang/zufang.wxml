@@ -1,0 +1,136 @@
+<!-- 
+2019年6月11日11:43:32
+我要卖房页面 
+-->
+<!-- 容器 -->
+<view class='con-box'>
+  <!-- 图标显示进程 -->
+  <view class='head-box'>
+    <span style='color:red' class="iconfont icon-diannao"></span>
+    <view class="iconfont icon-jiantou-you"></view>
+    <span class="iconfont icon-dianhua"></span>
+    <view class="iconfont icon-jiantou-you"></view>
+    <span class="iconfont icon-fangyuanchaxun"></span>
+  </view>
+  <view class='raduce'>
+    <span style='color:red'>线上发布</span>
+    <span>电话核实</span>
+    <span>房源上架</span>
+  </view>
+  <!-- 图标显示进程部分结束 -->
+
+  <form>
+    <view class='biaodan'>
+      <label>手机号
+        <span class="xing">*</span>
+      </label>
+      <input type='text' class='inp' placeholder-class='pla' placeholder='请输入电话号码' />
+    </view>
+
+    <view class='biaodan'>
+      <label>姓名
+        <span class="xing">*</span>
+      </label>
+      <input type='text' class='inp' placeholder-class='pla' placeholder='您的姓名' />
+    </view>
+
+    <view class='biaodan' style='margin-top:30rpx;'>
+      <label>小区名字
+        <span class="xing">*</span>
+      </label>
+      <input type='text' class='inp' placeholder-class='pla' placeholder='请输入' />
+    </view>
+
+    <view class='biaodan'>
+      <label>楼层楼号
+        <span class="xing">*</span>
+      </label>
+      <input type='text' class='inp' placeholder-class='pla' placeholder='请输入' />
+    </view>
+
+    <view class='biaodan'>
+      <label>售价
+        <span class="xing">*</span>
+      </label>
+      <span class="sp">元/月</span>
+      <input type='text' class='inp-p' placeholder-class='pla' placeholder='请输入' />
+    </view>
+
+    <view class='biaodan'>
+      <label>户型
+        <span class="xing">*</span>
+      </label>
+      <input type='text' class='inp' disabled='disabled' bindtap='clickMe' value="{{month}}{{day}}" />
+
+    </view>
+
+    <view class='biaodan'>
+      <label>面积
+        <span class="xing">*</span>
+      </label>
+      <span class="sp">㎡</span>
+      <input type='text' class='inp-p' placeholder-class='pla' placeholder='请输入' />
+    </view>
+
+    <view class='biaodan'>
+      <label>装修
+        <span class="xing">*</span>
+      </label>
+      <input type='text' class='inp' disabled='disabled' bindtap='clickMe1' value="{{year}}" />
+    </view>
+
+    <view class='biaodan'>
+      <label>配套设置
+        <span class="xing">*</span>
+      </label>
+      <!-- 多选框 -->
+    </view>
+    <view class='che'>
+    <checkbox-group bindchange="checkboxChange">
+        <label class="checkbox" wx:for="{{items}}" wx:key='unique'>
+          <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+        </label>
+      </checkbox-group>
+      </view>
+      <!-- 多选框结束 -->
+  </form>
+  
+  <!-- 表单收集结束 -->
+
+  <!-- 2019年6月12日10:33:01 -->
+  <!-- 图片添加部分 -->
+  <text style='font-size:30rpx;height:40rpx;line-height:40rpx'>图片附件（最多9张）</text>
+  <view class='addimage'>
+    <image bindtap='addpic' src='pic/shizi.png'></image>
+
+  </view>
+  <!-- 图片添加部分结束 -->
+
+  <button class='last'>立即委托
+    <!-- 滑动选择部分 -->
+    <view class='queding' wx:if="{{tee}}">
+      <picker-view indicator-style="height: 40px;" value="{{value}}" bindchange="bindChange" class='change'>
+        <picker-view-column>
+          <view wx:for="{{months}}" style="line-height: 40px;font-size:28rpx;color:black;">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{days}}" style="line-height: 40px;font-size:28rpx;color:black;">{{item}}</view>
+        </picker-view-column>
+      </picker-view>
+      <button class='btn' bindtap='close'>确定</button>
+    </view>
+    <view class='queding' wx:if="{{te}}" bindtap='close'>
+      <picker-view indicator-style="height: 40px;" value="{{value}}" bindchange="bindChange1" class='change'>
+        <picker-view-column>
+          <view wx:for="{{years}}" style="line-height: 40px;font-size:28rpx;color:black;">{{item}}</view>
+        </picker-view-column>
+      </picker-view>
+      <button class='btn' bindtap='close'>确定</button>
+    </view>
+    <!-- 滑动选择部分结束 -->
+  </button>
+
+
+
+
+</view>

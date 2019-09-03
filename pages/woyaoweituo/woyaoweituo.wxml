@@ -1,0 +1,17 @@
+<!--pages/woyaoweituo/woyaoweituo.wxml-->
+<view class='weituo'>
+<view class='weituo_center'>
+<view class='weituo_img'>
+<image src='img/weituoguanli.png'></image>
+<view class='weituo_info'><text>还没有委托信息额~</text></view>
+</view>
+<view class='zushou'>
+<!--2019年6月13日18:18:32
+实现：
+租房 售房 界面-->
+<view class='sale' wx:for='sale' wx:key='unique'>
+<view class='sale_title'>{{sale[index]}}</view>
+</view>
+</view>
+</view>
+</view>

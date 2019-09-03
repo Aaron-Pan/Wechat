@@ -1,0 +1,239 @@
+/* pages/middleman_del/middleman_del.wxss */
+@import '/pages/index/ico.wxss';
+page{
+  height: 100%;
+  background-color: rgba(220, 220, 220, 0.437);
+}
+.middleman_del{
+  width: 100%;
+  height: 400rpx;
+  background-color: #fff;
+}
+.middleman{
+  width: 100%;
+  height: 200rpx;
+}
+.midleman{
+  display: flex;
+  width: 100%;
+  height: 220rpx;
+  border-bottom: 2rpx solid gainsboro;
+}
+.middleman_img{ 
+  margin-top: 20rpx;
+  width: 25%;
+  height: 200rpx;
+}
+.middleman_title{
+  margin-top: 20rpx;
+  width: 25%;
+  height: 200rpx;
+}
+.middleman_img image{
+  width: 100rpx;
+  height: 130rpx;
+  margin: 30rpx;
+  border-radius: 50%;
+}
+.man{
+  margin-top: 15%;
+  font-size: 32rpx;
+
+}
+.partment{
+  margin-top: 5%;
+  font-size: 30rpx;
+  color: gray;
+}
+.yeji{
+  display: flex;
+}
+.shou{
+  text-align: center;
+  width: 80rpx;
+  line-height: 35rpx;
+  border-radius: 8rpx;
+  height: 35rpx;
+  margin-top: 5%;
+  font-size: 20rpx;
+  background-color: gainsboro;
+  color: gray;
+}
+.zu{
+  margin-left:5%; 
+}
+.middleman_icon{
+  float: right;
+  margin-top: 40rpx;
+  width: 40%;
+  height: 200rpx;
+
+}
+.middleman_icon span{
+  float: right;
+  margin: 20% 10% 0 0;
+  color: #ed5d29;
+  font-size: 50rpx;
+}
+.jinjiren{
+width: 100%;
+height: 180rpx;
+}
+.bumen{
+  margin-top: 8%;
+  width: 90%;
+  height: 50rpx;
+  font-size: 28rpx;
+  color: gray;
+  line-height: 50rpx;
+  margin-left: 60rpx;
+}
+.pingfen{
+  display: flex;
+  height: 50rpx;
+  width: 90%;
+  margin-left: 60rpx;
+  font-size: 28rpx;
+  color: gray;
+  line-height: 50rpx;
+}
+.xin1 span{color: red;}
+.icon--{font-size: 36rpx;}
+
+.showdata{
+width: 100%;
+height: auto;
+background-color: #fff;
+margin-top: 5%;
+}
+.tuijian{ 
+  display: flex;
+  width:100%;
+  height: 80rpx;
+}
+.ershou{
+  width: 100rpx;
+  height: 65rpx;
+  margin-top:12%;
+  line-height: 100rpx;
+  font-size: 32rpx;
+}
+.tuijian_zong{
+  font-size:28rpx;
+  margin: 5% 0 0 5%;
+  display: flex;
+  width: 95%;
+  height:280rpx;
+  border-bottom: 2rpx solid gainsboro;
+}
+.tuijian_left{
+  position: relative;
+  width:266rpx;
+  height: 200rpx;
+}
+.tuijian_left image{
+  margin-top: 10%;
+  margin-left: 24rpx;
+  width: 240rpx;
+  height: 180rpx;
+}
+.biaozhi{
+  margin-top: 38rpx;
+  margin-left:10rpx; 
+  line-height: 35rpx;
+  color: white;
+  position: absolute;
+  font-size: 24rpx;
+  width: 258rpx;
+  height:35rpx;
+  text-indent:0.7em;
+  background-color:rgba(0, 196, 130, 0.982); 
+}
+.leixing{
+  margin-top: 170rpx;
+  margin-left: 25rpx;
+  line-height: 35rpx;
+  color: white;
+  position: absolute;
+  font-size: 22rpx;
+  width: 80rpx;
+  height: 35rpx;
+  background-color:rgba(59, 62, 70, 0.595); 
+}
+.xing{
+  margin-left:10rpx; 
+  margin-top: 72rpx;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 22rpx solid rgba(4, 155, 105, 0.982);
+  border-left:16rpx solid transparent;
+}
+.tuijian_right {
+  margin:2% 0 0 5%;
+  width:100%;
+  height: 200rpx;
+}
+.mianji{
+  display: flex;
+  color: grey;
+  margin-top: 10rpx;
+  font-size:26rpx;
+}
+.mj{ 
+  width: 110rpx;
+  height: 30rpx;
+  text-align: center;
+  line-height: 30rpx;
+  border: 2rpx solid gainsboro;
+}
+.hu{margin-left: 20rpx;}
+.address{
+  width: 95%;
+}
+.salary{
+  color: red;
+  margin-top: 10rpx;
+  font-size:30rpx; 
+}
+.sala{font-weight: bold;}
+.money{font-size: 20rpx;}
+.tedia{
+  border-radius:6rpx; 
+  width: 100rpx;
+  height: 40rpx;
+  background-color: rgba(0,196, 130, 0.182);
+  font-size: 20rpx;
+  color: #00c482;
+  text-align: center;
+  line-height: 40rpx;
+  margin-top:10rpx;
+}
+.tedian{
+display: flex;
+}
+.ted{
+  margin-left: 3%;
+  background-color:rgba(0,196, 130, 0.182);
+  color: #00c482;
+}
+.te{
+  margin-left: 3%;
+  background-color:rgba(0,196, 130, 0.182);
+  color:#00c482;
+}
+.show{
+  text-align: center;
+  margin-left:60rpx;
+  line-height:100rpx;
+  color:#333333;
+  font-size:28rpx;
+  opacity: 0.5;
+}
+.hidden{
+  text-align: center;
+  margin-left:60rpx;
+  line-height:100rpx;
+  color:#00c482;
+  font-size:28rpx;
+}

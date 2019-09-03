@@ -1,0 +1,32 @@
+<!-- 定义大的框 -->
+<view class='all-box'>
+  <!-- 头部加入我们 -->
+  <view class='head'>
+    <text>房世家地产</text>
+    <text style='float:right;text-decoration:underline ' bindtap='addwe'>加入我们</text>
+  </view>
+  <!-- 关于我们 -->
+  <view class='raduce-box'>
+    <text class='titl'>关于我们</text>
+    <view class='xian'></view>
+    <text class='context'>房世家地产：专业从事一手房、二手房交易买卖，商业、住宅租赁，产权过户、银行贷款等业务。</text>
+  </view>
+  <!-- 发展历程 -->
+   <view class='raduce-box'>
+    <text class='titl' style='font-size:28rpx'>未来规划</text>
+    <view class='xian'></view>
+    <text class='context'>规划中......</text>
+  </view>
+  <!-- 联系我们 -->
+   <view class='raduce-box'>
+    <text class='titl' style='font-size:28rpx'>联系我们</text>
+    <view class='xian'></view>
+    <view class='lianxi'>
+    <text class='gsname'>贵阳市房世家地产</text>
+    <text class='dizhi'>地址：贵阳市南明区花果园C区国际中心三号A座
+    电话：13595799415
+    邮箱：2304265189@qq.com
+    </text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,95 @@
+/* pages/my/my.wxss */
+@import '/pages/index/ico.wxss';
+page{
+  background-size:100% 50%;
+  background-image: url('http://m.qpic.cn/psb?/V10e6ejl0ETYD9/EBouO9sUS5EPNY1N27dMY7gmdXywW10WHmSdPUrU5eA!/b/dIQAAAAAAAAA&bo=8QFHAQAAAAARB4Y!&rf=viewer_4');
+  background-repeat:no-repeat;
+    filter:alpha(opacity=40);
+}
+.my{
+width: 100%;
+height: auto;
+}
+.userinfo {
+  margin-top: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: rgb(1, 25, 32);
+}
+
+.usermotto {
+  margin-top: 100rpx;
+}
+.my_ceter{
+  width: 100%;
+  height:700rpx;
+}
+.left{
+  float: left;
+  width: 10%;
+  height:320rpx;
+  background: white;
+}
+.left span{
+  display:block;
+  width:35rpx;
+  text-align:center;
+  height:35rpx;
+  line-height: 35rpx;
+  margin-bottom:46rpx;
+  margin-left:25rpx;
+
+
+}
+.record{
+  float: right;
+  font-size: 30rpx;
+  width: 90%;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: rgba(128, 128, 128, 0.748);
+  background-color: #fff;
+}
+.soucang{
+ border-top: 2rpx solid rgba(220, 220, 220, 0.637);
+}
+.fabu{
+  border-top: 2rpx solid gainsboro;
+}
+.jiantou{
+  float: right;
+  margin-right: 2%;
+}
+.icon-jiaruwomen1{
+   border-radius: 5rpx;
+  color: white;
+  background-color:#b9763c;
+}
+.icon-gsjs{
+   border-radius: 5rpx;
+  color: white;
+  background-color:#3cb950;
+}
+.icon-kefu_lr{
+   border-radius: 5rpx;
+  color: white;
+  background-color:#e54b00;
+}
+.icon-fabu{
+  border-radius: 5rpx;
+  color: white;
+  background-color:#149bba;
+  }
+

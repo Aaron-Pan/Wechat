@@ -1,0 +1,100 @@
+<!--pages/zufang_detail/zufang_detail.wxml-->
+<!--pages/details/details.wxml-->
+<!--slider-->
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+  <block wx:for="{{imgArr}}" wx:key="index">
+    <swiper-item>
+      <image class='slide' src="{{item}}" bindtap='previewImg' data-index='{{index}}'></image>
+    <view class='idx'><text>{{index+1}}/{{imgArr.length}}</text></view>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 2019年6月19日11:01:55 -->
+<!-- 具体位置详情 -->
+<view class='dizhi'>
+<text class='title'>{{tit}}</text>
+<span class="iconfont icon-fangyuan_tupianzaizu"></span>
+<!--<text class='other_name'>别名：{{other_name}}</text>-->
+<view class='peitao'>
+<view class='raduce' style='background:#FCF1DF;color:#F0C07D;'>{{other[0]}}</view> 
+<view class='raduce' style='background:#FCE4E0;color:#FE7F78;margin-left: 2%;'>{{other[1]}}</view> 
+<view class='raduce' style='background:#E3F3FD;color:#72B9F6;margin-left: 2%;'>{{other[2]}}</view> 
+</view>
+<!--项目情况-->
+<view class='zufang'>
+<view class='zujin'><view>租价</view><view class='zujia'>{{prices}}</view></view>
+<view class='zujin'><view>户型</view><view class='zujia'>{{huxing}}</view></view>
+<view class='mianji'><view>建筑面积</view><view class='zujia'>{{mianji}}</view></view>
+</view>
+<text class='other_name'>出租方式：<text style='color:orangered'>{{leixing}}</text></text>
+<text class='other_name'>小区名称：<text style='color:black'>{{other_name}}</text></text>
+</view>
+
+<!-- 户型图 -->
+<view class='huxing'>
+
+<view class='huxing-xq'>
+   <view class='hx-img'><image src='http://pic2.to8to.com/home/a6/b1/a6b103eade4ff7f146ada6200a445c08_s.jpg' bindtap='previewHuxingImg'></image></view>
+   <view class='hx-raduce'>
+   <text style='font-size:30rpx;display:block'>{{huxing}}</text>
+   <text style='font-size:25rpx;color:#9F9F9F;display:block'>{{fangxiang}}</text>
+   <text style='color:orangered;font-size:28rpx; margin-right:20rpx'>{{prices}} <text>元/月</text></text>
+   </view>
+</view>
+</view>
+
+
+<!-- 项目参数 -->
+<!-- 2019年6月19日11:57:38 -->
+<view class='dizhi1' style='margin-top:20rpx'>
+<text class='title'>基本信息</text>
+<!-- <text class='other_name'>开发商：<text style='color:black'>{{kfs}}</text></text>
+<text class='other_name'>物业公司：<text style='color:black'>{{wygs}}</text></text>-->
+<text class='other_name'>建筑类型：<text style='color:black'>{{jzlx}}</text></text>
+<text class='other_name1'>均   价：<text style='color:black'>{{kprq}}</text>元/㎡</text>
+<text class='other_name1'>区   域：<text style='color:black'>{{jlrq}}</text></text>
+<text class='other_name1'>装修情况：<text style='color:black'>{{cqnx}}</text></text>
+<text class='other_name1'>房屋朝向：<text style='color:black'>{{zdmj}}</text></text>
+<text class='other_name1'>容 积 率 ：<text style='color:black'>{{rjl}}</text></text>
+<text class='other_name1'>绿 化 率 ：<text style='color:black'>{{lhl}}</text></text>
+<text class='other_name1'>收租方式：<text style='color:black'>{{wyzs}}</text></text>
+<text class='other_name1'>物 管 费：<text style='color:black'>{{zwzs}}</text></text>
+</view>
+
+<!-- 项目简介 -->
+<view class="xmjj {{ellipsis?'ellipsis':'unellipsis'}}"  style='margin-top:20rpx;'>
+<text class='title'>房源描述</text>
+<view class="context"><text >{{jianjie}}</text></view>
+ <view bindtap='ellipsis' class='show'>
+ <image class='img-ellipsis' src="{{ellipsis?'image/ellipsis.png':'image/unellipsis.png'}}"></image>
+ </view>
+</view>
+
+<!-- 位置与周边 -->
+
+<view class='xmj' style='margin-top:20rpx;'>
+<span class="iconfont icon-weizhi1"></span>
+<text class='title'>位置与周边</text>
+<text class='clickmap' style='font-size:24rpx;'>(点地图)</text>
+<view class='ditu'>
+<!-- map.wxml -->
+<image bindtap='getLocation' src='../index/pic/map.png'></image>
+</view>
+</view>
+<!--房源数据推荐位置-->
+
+
+
+
+<!-- 电话联系以及收藏 
+2019年6月19日15:05:11
+-->
+
+<view class='last'>
+<view class="shoucang" bindtap='shoucang'>
+<image class='xin' src="{{isShow?'./image/xin1.png':'./image/xin.png'}}" data-sid="{{sid}}"></image>
+<text class='sc'>{{isShow?"收藏":"已收藏"}}</text>
+</view>
+<view class='phone iconfont icon-dianhua' bindtap='zufang_detail'>电话联系</view>
+</view>

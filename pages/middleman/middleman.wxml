@@ -1,0 +1,31 @@
+<!--pages/middleman/middleman.wxml-->
+<!--2019-6-13 11:07:23
+实现：
+经纪人页面
+1、搜素
+2、列表
+-->
+
+<!--搜索-->
+<view class='search'>
+ <view class='sousuo'>
+ <span class="iconfont icon-fangdajing"></span>
+<input type="text" placeholder="搜搜经纪人" style='font-size:26rpx;'/>
+</view>
+</view>
+<!--经纪人列表-->
+<view class='middleman' wx:for='{{middlemanlist}}' wx:key='unique'>
+<view class='middleman_img'  bindtap='middleman_del'>  
+<image src='{{item.middleman_img}}'></image>
+</view>
+<view class='middleman_title'  bindtap='middleman_del'>
+<view class='man'><text>{{item.man}}</text></view>
+<view class='partment'><text>{{item.partment}}</text></view>
+<view class='yeji'>
+<view class='shou'>售 {{item.shou}}</view>
+<view class='shou zu'>租 {{item.zu}}</view>
+</view></view>
+<view class='middleman_icon'>
+<span class="iconfont icon-kongjian-"  bindtap='middleman_call'></span>
+</view>
+</view>

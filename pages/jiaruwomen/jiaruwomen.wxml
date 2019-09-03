@@ -1,0 +1,25 @@
+<view class="image-big">
+<image src='./img/zp.jpg'></image>
+</view>
+<view class='youxinag'>
+<image src='img/post.png' class='ima'></image>
+<text class='toudi'>简历投递邮箱:</text>
+<text bindtap='clickyx' class='yx'>230426589@qq.com</text>
+</view>
+<!-- 招聘岗位详情 -->
+<view class='zp-box'>
+<text class='gw'>销售人员</text>
+<text class='time'>2019/06/13 发布</text>
+<text class='sum'>招聘人数: <text style='color:black'>  10</text></text>
+<text class='bm'>部门:<text style='color:black'>  一手部</text></text>
+<text class='sum'>学历: <text style='color:black'>  高中</text></text>
+<text class='bm'>工作年限:<text style='color:black'>  不限</text></text>
+</view>
+<view class='zp-box'>
+<text class='gw'>销售人员</text>
+<text class='time'>2019/06/13 发布</text>
+<text class='sum'>招聘人数: <text style='color:black'>  5</text></text>
+<text class='bm'>部门:<text style='color:black'>  租赁部</text></text>
+<text class='sum'>学历: <text style='color:black'>  高中</text></text>
+<text class='bm'>工作年限:<text style='color:black'>  不限</text></text>
+</view>

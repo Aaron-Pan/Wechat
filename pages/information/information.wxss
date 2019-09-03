@@ -1,0 +1,68 @@
+@import '/pages/index/ico.wxss';
+.tab {
+  float: left;
+  width: 33.3333%;
+  text-align: center;
+  padding: 10rpx 0;
+}
+ 
+.topTabSwiper {
+  zoom: 1;
+}
+.topTabSwiper:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.tabBorer {
+  font-size: 30rpx;
+  border-bottom: 1px solid #ed5d29;
+  color: #ed5d29;
+} 
+.swiper {
+  width: 100%;
+}
+.swiper_con {
+  text-align: left;
+  width: 100%;
+  height: 100%;
+}
+.liebiao{
+display: flex;
+width: 100%;
+height: 280rpx;
+background-color: #fff;
+}
+.liebiao_img{
+width: 40%;
+height: 280rpx;
+}
+.liebiao_left{
+width: 60%;
+height: 280rpx;
+}
+.liebiao_img image{
+margin:10% auto;
+width: 240rpx;
+height: 180rpx;
+}
+.liebiao_title{
+margin:5% 0 0 5%;
+width: 90%;
+height: 120rpx;
+font-size: 30rpx;
+}
+.liulan_time{
+width: 90%;
+display: flex;
+margin:5% 0 0 5%;
+}
+.liebiao_time{
+color: gray;
+font-size: 26rpx;
+}
+.liulan{
+color: gray;
+margin-left: 5%;
+font-size: 26rpx;
+}

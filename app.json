@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/kanfang/kanfang",
+    "pages/my/my",
+    "pages/logs/logs",
+    "pages/new_house/new_house",
+    "pages/details/details",
+    "pages/ershou_house/ershou_house",
+    "pages/xiezilou/xiezilou",
+    "pages/chuzu/chuzu",
+    "pages/zufang_detail/zufang_detail",
+    "pages/middleman/middleman",
+    "pages/middleman_del/middleman_del",
+    "pages/information/information",
+    "pages/information_details/information_details",
+    "pages/goufangjisuanqi/goufangjisuanqi",
+    "pages/woyaoweituo/woyaoweituo",
+    "pages/woyaomaifang/woyaomaifang",
+    "pages/sellHouse/sellHouse",
+    "pages/woyaozufang/woyaozufang",
+    "pages/zufang/zufang",
+    "pages/gongsijianjie/gongsijianjie",
+    "pages/jiaruwomen/jiaruwomen"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor":"white",
+    "navigationBarTitleText": "贵州房世家-首页",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+
+  "tabBar": {
+    "color": "black",
+    "selectedColor": "#5eb87a",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+  "list": [{
+    "pagePath": "pages/index/index",
+    "text": "首页",
+    "iconPath": "/images/index.png",
+    "selectedIconPath": "/images/index1.png"
+  },
+  {
+    "pagePath": "pages/kanfang/kanfang",
+    "text": "看房",
+    "iconPath": "/images/kanfang.png",
+    "selectedIconPath": "/images/kanfang1.png"
+  },
+  {
+    "pagePath": "pages/my/my",
+    "text": "我的",
+    "iconPath": "/images/mine.png",
+    "selectedIconPath": "/images/mine1.png"
+  }]
+},
+"permission": {
+  "scope.userLocation": {
+    "desc": "你的位置信息将用于小程序位置接口的效果展示"
+  }
+}
+}

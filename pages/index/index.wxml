@@ -1,0 +1,134 @@
+<!--index.wxml-->
+<!--<wxs module="filters" src="index.wxs"></wxs>-->
+<!--slider-->
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular='{{circular}}' class='swiper-container' style='height:400rpx'>
+  <block wx:for="{{slider}}" wx:key='unique'>
+    <swiper-item>
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<!--2019年6月10日17:18:51
+实现：
+搜索界面-->
+<!--search-->
+<view class='search'>
+ <view class='sousuo'>
+ <span class="iconfont icon-fangdajing"></span>
+<input type="text" placeholder="你想住在哪？" style='font-size:26rpx;'/>
+</view>
+</view>
+
+<!--2019年6月10日15:44:10
+实现：
+1、修改项目列表-->
+<!--项目列表-->
+<view class="menu-wrp">
+  <!--设定一个item项后，遍历输出-->
+  <view class="menu-list" wx:for="{{imgUrls}}" wx:key='unique'>
+     <view class='menu-title'>
+     <image class="menu-img" src="{{item}}" bindtap='{{binding[index]}}'/>
+     <view class="menu-desc">{{descs[index]}}</view>
+    <!--<view class="menu-descr">{{describel[index]}}</view>-->
+    </view>
+  </view>
+</view>
+<!--2019年6月13日10:27:50
+实现：
+地产资讯-->
+<view class='zixun'>
+<image src='http://m.qpic.cn/psb?/V10e6ejl0ETYD9/WKMpVFFyHaBQ64BN5e54E2yvZq4mtIhqWq8f0L3NIwo!/b/dL4AAAAAAAAA&bo=yABXAAAAAAADB70!&rf=viewer_4'></image>
+<!--<view class='zixun_title'>
+佛山租房和无房提取住房公积金标准不变 无房提取最高6930元/年
+</view>-->
+<swiper class="swiper_zixun" vertical="true" autoplay="true" circular="true" interval="3000" bindtap='information_details'>
+  <block wx:for="{{msgList}}" wx:key="unique">
+      <swiper-item>
+        <view class="zixun_item">{{item.title}}</view>
+      </swiper-item>
+  </block>
+</swiper>
+</view>
+
+<view class="gap-1"></view>
+<!--2019年6月11日17:06:21
+实现：
+租售房 委托管理-->
+<view class='weituo' bindtap='weituo'>
+<view class='weituo_title'><text>我要委托</text></view>
+<view class='weituoguanli'>委托管理</view>
+<span class="icon iconfont icon-jiantou"></span>
+</view>
+<!--2019年6月11日14:25:41
+实现：
+租房 售房 界面-->
+<view class='zushou'>
+<view class='sale'  wx:for="{{salelist}}" wx:key="unique">
+<view class='sale_title' bindtap='{{zushou[index]}}'>{{item.sale_title}}</view>
+<view class='sale_describel' bindtap='{{zushou[index]}}'>{{item.sale_describel}}</view>
+<image class='sale_pic' src='{{item.sale_pic}}'  bindtap='{{zushou[index]}}'></image>
+</view>
+</view>
+
+<view class='tuijian'>
+<view class='tuijian_title'><text>为您推荐</text></view>
+<view wx:for='{{navbar}}' class="{{selected==index?'hidden':'show'}}" data-index='{{index}}' bindtap="selected" wx:key='unique'>
+<view class='ershou'>{{item}}</view>
+<!--<view class='new'>新房</view>-->
+</view>
+
+</view>
+<!--推荐房源列表-->
+<!--2019年6月11日09:46:12
+实现：
+列表数据渲染-->
+<view wx:if="{{selected == 0}}">
+<view class='tuijian_zong' wx:for="{{prolist}}" wx:key="uid" bindtap='zufang_detail' data-id="{{item.iid}}">
+<view class='tuijian_left'>
+<image src='{{item.image}}'></image>
+</view>
+<view class='biaozhi'>房世家真实出租房源</view>
+<view class='leixing'>{{item.leixing}}</view>
+<view class='xing'></view>
+<view class='tuijian_right'>
+ <view class='address'>{{item.xiangqing}}</view>
+ <view class='mianji'>
+ <view class='mj'>{{item.mianji}} ㎡</view>
+ <view class='mj hu'>{{item.huxing}}</view>
+</view>
+ <view class='tedian'>
+ <view class='tedia'>{{item.tdone}}</view>
+ <view class='tedia ted'>{{item.tdtwo}}</view>
+ <view class='tedia te ted'>{{item.tdthree}}</view>
+ </view>
+ <view class='salary'><span class="iconfont icon-zujin"></span><text class='sala'>{{item.prices}} </text><text class='money'>元/月</text></view>
+</view>
+</view>
+</view>
+<!--一手房数据列表渲染-->
+<view wx:if="{{selected ==1}}">
+<view class='tuijian_zong' wx:for="{{newlist}}" wx:key="unique">
+<view class='tuijian_left'  bindtap='details'>
+<image src='{{item.tuijian_left}}'></image>
+</view>
+<view class='biaozhi'>俊发城房源</view>
+<view class='leixing'>{{item.n_leixing}}</view>
+<view class='xing'></view>
+<view class='tuijian_right' bindtap='details'>
+ <view class='address'>{{item.n_title}}
+ </view>
+ <view class='mianji'>
+ <view class='mj'>{{item.n_mianji}} ㎡</view>
+ <view class='mj hu'>{{item.n_huxing}}</view>
+</view>
+ <view class='tedian'>
+ <view class='tedia'>{{item.n_tedian}}</view>
+ <view class='tedia ted'>{{item.n_liangdian}}</view>
+ <view class='tedia te ted'>{{item.n_jianzhuleixing}}</view>
+ </view>
+ <view class='salary'><span class="iconfont icon-zujin"></span><text class='sala'>{{item.n_sale}} </text><text class='money'>元/㎡</text></view>
+</view>
+</view>
+
+</view>

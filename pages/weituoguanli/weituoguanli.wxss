@@ -1,0 +1,114 @@
+/* pages/weituoguanli/weituoguanli.wxss */
+@import"./font/iconfont.wxss";
+
+page{
+width: 100%;
+background-color:rgba(220, 220, 220, 0.437);
+height: 93%;
+
+}
+.container{
+  width: 80%;
+  height: 90%;
+  background: white;
+  padding: 5% 5%;
+  margin: 5% 5%;
+  box-shadow: 0 0 30rpx 3rpx gray;
+}
+.in-box{
+  width: 100%;
+  height: 100%;
+}
+.img-box{
+  width: 100%;
+  height: 200rpx;
+}
+.img-box image{
+  display: block;
+  width: 25%;
+  height: 150rpx;
+  margin: 10rpx auto;
+}
+.img-box text{
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size:28rpx;
+  color: #b9b9b9;
+}
+.datail{
+  margin-top: 50rpx;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+.font{
+  width: 37%;
+  background: rgba(220, 220, 220, 0.437);
+  height: 80rpx;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  text-align: center;
+  margin-top: 50rpx;
+  line-height: 80rpx;
+}
+.zuihou{
+  width: 70%;
+  height: 20%;
+  margin: 10rpx 15%;
+  border-top: 1px solid rgba(220, 220, 220, 0.437);
+}
+.fabu{
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+  color: #666;
+}
+.bottom-img{
+  width: 100%;
+  margin-top: 20rpx;
+}
+.head-box {
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  justify-content: start;
+}
+
+.raduce {
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.head-box span {
+  width: 25%;
+  height: 120rpx;
+  color: #666;
+  font-size: 70rpx;
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+.head-box view {
+  width: 15%;
+  height: 120rpx;
+  font-size: 60rpx;
+  text-align: center;
+  color: #ccc;
+  margin-top: 30rpx;
+}
+
+.raduce span {
+  width: 25%;
+  height: 60rpx;
+  font-size: 25rpx;
+  color: #666;
+  text-align: center;
+  line-height: 40rpx;
+}

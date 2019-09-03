@@ -1,0 +1,200 @@
+<!--pages/chuzu/chuzu.wxml-->
+
+<!-- <wxs module="filters" src="../index/index.wxs"></wxs> -->
+<view class='top'>
+<!--search-->
+<view class='search'>
+ <view class='sousuo'>
+ <span class="iconfont icon-fangdajing"></span>
+<input type="text" bindinput='inpu' placeholder="请输入楼盘名称、区域或片区" style='font-size:26rpx;'/>
+</view>
+</view>
+<!--
+2019年6月25日15:07:17
+实现：
+1、下拉列表
+2、两级联动
+-->
+<!-- 下拉菜单 -->
+<view class='pushClick'>
+<!-- 下拉菜单   -->
+  <view id="swiper-tab">
+    <view class="swiper-tab">
+      <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="tabNav" data-xq="{{yi}}">{{first}}
+      <span class="iconfont icon-xiala"></span>
+      </view>
+      <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="tabNav" data-xq="{{er}}">{{second}}
+      <span class="iconfont icon-xiala"></span>
+      </view>
+      <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="tabNav" data-xq="{{san}}">{{thirds}}
+      <span class="iconfont icon-xiala"></span>
+      </view>
+      <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="tabNav" data-xq="{{si}}">{{fours}}
+       <span class="iconfont icon-xiala"></span>
+      </view>
+    </view>
+    <swiper current="{{currentTab}}" duration="1000" class="swiper-item" style='display:{{displays}}'>
+      <swiper-item>
+      <view>
+      <view class='qiehuannier'>
+      <view class="nav bc_white">
+      <view class="{{selected?'red':'default'}}" bindtap="selected">南明区</view>
+      <view class="{{selected1?'red':'default'}}" bindtap="selected1">云岩区</view>
+      <view class="{{selected2?'red':'default'}}" bindtap="selected2">白云区</view>
+      <view class="{{selected3?'red':'default'}}" bindtap="selected3">乌当区</view>
+      <view class="{{selected4?'red':'default'}}" bindtap="selected4">花溪区</view>
+      <view class="{{selected5?'red':'default'}}" bindtap="selected5">观山湖区</view>
+    </view>
+    <view id="rights"  data-hi="{{index}}">
+      <view class="{{selected?'show':'hidden'}}" hidden='{{rowShow[0].isShows ? true : fasle }}'>
+      <view class="{{_sum==1?'add_adress':'add_city'}}" data-num="{{item.id}}" bindtap="clickSum" data-name="{{item}}"  wx:for="{{ rowLise.row_huaguoyuan.name}}" wx:key="item">{{item}}</view>
+      </view>
+      <view class="{{selected1?'show':'hidden'}}">
+      <view class="{{_mum == 1?'add_adre':'add_city'}}" data-num="{{item.id}}" bindtap="clickMum" data-name="{{item}}" wx:for="{{ rowLise.row_yunyan.name}}" wx:key="item">{{item}}</view>
+      </view>
+    <view class="{{selected2?'show':'hidden'}}">
+      <view class="{{_cum == 1?'add_ad':'add_city'}}" data-num="{{item.id}}" bindtap="clickCum" data-name="{{item}}" wx:for="{{ rowLise.row_baiyun.name}}" wx:key="item">{{item}}</view>
+    </view>
+    <view class="{{selected3?'show':'hidden'}}">
+      <view class="{{_wum == 1?'add_wudang':'add_city'}}" data-num="{{item.id}}" bindtap="clickWum"  wx:for="{{ rowLise.row_wudang.name}}" wx:key="item" data-name="{{item}}">{{item}}</view>
+    </view>
+      <view class="{{selected4?'show':'hidden'}}">
+      <view class="{{_hum == 1?'add_huaxi':'add_city'}}" data-num="{{item.id}}" bindtap="clickHum" wx:for="{{ rowLise.row_huaxi.name}}" wx:key="item" data-name="{{item}}">{{item}}</view>
+      </view>
+      <view class="{{selected5?'show':'hidden'}}">
+      <view class="{{_gum == 1?'add_guanshanhu':'add_city'}}" data-num="{{item.id}}" bindtap="clickGum" wx:for="{{ rowLise.row_guanshanhu.name}}" wx:key="item" data-name="{{item}}">{{item}}</view>
+    </view>
+    </view>
+    </view>
+    </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="location_bottom" hidden="">
+          <view class="{{_num == 1?'add_citying':'add_city'}}" data-num="1" bindtap="clickNum" data-name="不限">不限</view>
+          <view class="{{_num == 2?'add_citying':'add_city'}}" data-num="2" bindtap="clickNum" data-name="500以下">500以下</view>
+          <view class="{{_num == 3?'add_citying':'add_city'}}" data-num="3" bindtap="clickNum" data-name="500-1000">500-1000</view>
+          <view class="{{_num == 4?'add_citying':'add_city'}}" data-num="4" bindtap="clickNum" data-name="1000-1500">1000-1500</view>
+          <view class="{{_num == 5?'add_citying':'add_city'}}" data-num="5" bindtap="clickNum" data-name="1500-2000">1500-2000</view>
+          <view class="{{_num == 6?'add_citying':'add_city'}}" data-num="6" bindtap="clickNum" data-name="2000-2500">2000-2500</view>
+          <view class="{{_num == 7?'add_citying':'add_city'}}" data-num="7" bindtap="clickNum" data-name="2500以上">2500以上</view>
+            <view class="zidingyi">
+            <input class="front" type='text' value='最低价格'></input>
+            <p>-</p>
+            <input class="back" type='text' value='最高价格'></input>
+            <button style='margin-left:150rpx;'>确定</button>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="location_bottom" hidden="">
+          <view class="{{_res == 1?'add_House':'add_city'}}" data-num="1" bindtap="clickHouse" data-name="不限">不限</view>
+          <view class="{{_res == 2?'add_House':'add_city'}}" data-num="2" bindtap="clickHouse" data-name="一室">一室</view>
+          <view class="{{_res == 3?'add_House':'add_city'}}" data-num="3" bindtap="clickHouse" data-name="两室">两室</view>
+          <view class="{{_res == 4?'add_House':'add_city'}}" data-num="4" bindtap="clickHouse" data-name="三室">三室</view>
+          <view class="{{_res == 5?'add_House':'add_city'}}" data-num="5" bindtap="clickHouse" data-name="四室">四室</view>
+          <view class="{{_res == 6?'add_House':'add_city'}}" data-num="6" bindtap="clickHouse" data-name="四室以上">四室以上</view>
+        </view>
+      </swiper-item>
+      <swiper-item class="shaixuankuang">
+        <view class="shaixuan">
+          <span class="shuaixuantiaojian">面积</span>
+          <block wx:for="{{array}}" wx:key="key">
+            <view class="chose-txt" data-id="{{index}}" bindtap="choseTxtColor" style="{{index == one?' border:1rpx solid #00c482; color: #00c482;':'border:1rpx solid gainsboro;color:gray'}}">
+              <text class="chose-p">{{item.name}}</text>
+            </view>
+          </block>
+          <view class="zidingyi">
+            <span>自定义面积:</span>
+            <input class="front" type='text'></input>
+            <p>-</p>
+            <input class="back" type='text'></input>
+            <button>设置</button>
+          </view>
+        </view>
+        <view class="shaixuan">
+          <span class="shuaixuantiaojian">朝向</span>
+          <block wx:for="{{chaoxiang}}" wx:key="key">
+            <view class="chose-txt" data-id="{{index}}" bindtap="chaoxiang" style="{{index == two?'border:1rpx solid #00c482; color: #00c482;':'border:1rpx solid gainsboro;color:gray'}}">
+              <text class="chose-p">{{item.name}}</text>
+            </view>
+          </block>
+        </view>
+
+        <view class="shaixuan">
+          <span class="shuaixuantiaojian">楼层</span>
+          <block wx:for="{{louceng}}" wx:key="key">
+            <view class="chose-txt" data-id="{{index}}" bindtap="louceng" style="{{index == third?'border:1rpx solid #00c482; color: #00c482;':'border:1rpx solid gainsboro;color:gray'}}">
+              <text class="chose-p">{{item.name}}</text>
+            </view>
+          </block>
+        </view>
+        <view class="shaixuan">
+          <span class="shuaixuantiaojian">装修</span>
+          <block wx:for="{{zhuangxiu}}" wx:key="key">
+            <view class="chose-txt" data-id="{{index}}" bindtap="zhuangxiu" style="{{index == four?'border:1rpx solid #00c482; color:#00c482;':'border:1rpx solid gainsboro;color:gray'}}">
+              <text class="chose-p">{{item.name}}</text>
+            </view>
+          </block>
+        </view>
+        <view class="shaixuan">
+          <span class="shuaixuantiaojian">建筑类别</span>
+          <block wx:for="{{leibei}}" wx:key="key">
+            <view class="chose-txt" data-id="{{index}}" bindtap="leibei" style="{{index == five?'border:1rpx solid #00c482; color:#00c482;':'border:1rpx solid gainsboro;color:gray'}}">
+              <text class="chose-p">{{item.name}}</text>
+            </view>
+          </block>
+        </view>
+        <!--<view class="shaixuan">
+          <span class="shuaixuantiaojian">特色</span>
+          <block wx:for="{{tese}}" wx:key="key">
+            <view class="chose-txt" data-id="{{index}}" bindtap="tese" style="{{index == six?'border:1rpx solid #e8580c; color: #e8580c':'border:1rpx solid gainsboro;color:gray'}}">
+              <text class="chose-p">{{item.name}}</text>
+            </view>
+          </block>
+        </view>
+        <view class="shaixuan">
+          <span class="shuaixuantiaojian">排序</span>
+          <block wx:for="{{paixu}}" wx:key="key">
+            <view class="chose-txt" data-id="{{index}}" bindtap="paixu" style="{{index == seven?'border:1rpx solid #e8580c; color: #e8580c':'border:1rpx solid gainsboro;color:gray'}}">
+              <text class="chose-p">{{item.name}}</text>
+            </view>
+          </block>
+        </view>-->
+        <view class="qingkong">
+          <span class="tianjian" bindtap="qingchu">清除条件</span>
+          <p class="queren" bindtap="queren">确认</p>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="swiper-beijing" bindtap="hideNav" style='display:{{displays}}'></view>
+</view>
+</view>
+<!--推荐房源列表-->
+<!--2019年6月11日09:46:12
+实现：
+列表数据渲染-->
+<view class='tuijian'>
+<view class='tuijian_zong' wx:for="{{prolist}}" wx:key="uid" bindtap='zufang_detail' data-id="{{item.iid}}">
+<view class='tuijian_left' >
+<image src='{{item.image}}'></image>
+</view>
+<!--<view class='biaozhi'>此数据为模拟数据</view>
+<view class='leixing'>{{item.lei}}</view>
+<view class='xing'></view>-->
+<view class='tuijian_right'>
+ <view class='address'>{{item.xiangqing}}
+ </view>
+ <view class='mianji'>
+ <view class='mj'>{{item.mianji}} ㎡</view>
+ <view class='mj hu'>{{item.huxing}}</view>
+</view>
+ <view class='tedian'>
+ <view class='tedia'>{{item.tdone}}</view>
+ <view class='tedia ted'>{{item.tdtwo}}</view>
+ <view class='tedia te ted'>{{item.tdthree}}</view>
+ </view>
+ <view class='salary'><text class='sala'>{{item.prices}}  </text><text>元/月</text></view>
+</view>
+</view>
+</view>

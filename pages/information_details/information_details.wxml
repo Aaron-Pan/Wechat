@@ -1,0 +1,31 @@
+<!--pages/information_details/information_details.wxml-->
+<view class='information_details'>
+<view class='information_details_title'>
+佛山租房和无房提取住房公积金标准不变,无房提取最高6930元/年
+</view>
+<view class='information_details_img'>
+<view class='img'><image src='../index/images/fangshijia.jpg'></image></view>
+<view class='information_details_author'>
+<view class='author'>贵州房世家</view>
+<view class='fabu_time'>06-21 20:05</view>
+</view>
+</view>
+</view>
+<view class='content'>
+<view class='con'>
+日前，国家统计局发布了2019年5月份70个大中城市商品住宅销售价格变动情况。数据显示，一二线城市新建商品住宅销售价格环比涨幅均与上月相同或回落；三线城市新建商品住宅涨幅略升。  
+
+继年初以来，多个城市调控政策力度有所调整，房地产市场出现局部小幅回暖。5月份房价环比上涨的城市名单看，西安是环比增幅最大的城市，涨幅为2%。一线城市中，北京、广州和深圳分别上涨0.6%、0.8%和0.4%，上海下降0.1%。但近两月，针对局部楼市的销售市场以及土地市场快速升温，以苏州为代表的部分城市重新收紧了楼市政策。在“稳地价、稳房价、稳预期”的主基调下，全国住宅市场整体保持平稳。显然，前期的楼市“小阳春”只是局部和小幅回暖，在没有进一步政策支持的情况下，未来整体楼市成交将可能放缓。  
+
+从70城市数据看，上涨城市数量继续高位，连续2个月新建住宅67城市上涨，二手房55城市上涨。但不论是新建住宅还是二手房住宅，涨幅均明显下调。特别是四大一线城市中，5月份北京、深圳的二手房价格环比涨幅持平，广州环比下调0.3%，只有上海微涨0.1%。中原地产首席分析师张大伟表示，5月份楼市小阳春已然退烧，二手房价格涨幅全面放缓。“相比新建住宅网签数据滞后，二手房数据更有代表性。2019年5月全国70大热点城市房价最明显变动的数据是二手房价格平均涨幅明显退烧，5月份70大城市二手房平均环比上涨0.43%，相比4月份0.53%的涨幅明显退烧。”  
+</view>
+</view>
+<view class='hot_news'>
+<view class='news'>
+<view class='news_img'><span class="iconfont icon-xinwen"></span></view>
+<view class='news_title'>热门新闻</view>
+</view>
+<view class='remen' wx:for="{{remenlist}}" wx:key="unique">
+<view class='title'>{{index+1}}.{{item.title}}</view>
+</view>
+</view>

@@ -1,0 +1,121 @@
+<!--pages/middleman_del/middleman_del.wxml-->
+<wxs module="filters" src="../index/index.wxs"></wxs>
+<view class='middleman_del'>
+<view class='middleman'>
+<!--经纪人列表-->
+<view class='midleman' wx:for='{{middlemanlist}}' wx:key='unique'>
+<view class='middleman_img'>
+<image src='{{item.middleman_img}}'></image>
+</view>
+<view class='middleman_title'>
+<view class='man'><text>{{item.man}}</text></view>
+<view class='partment'><text>{{item.partment}}</text></view>
+<view class='yeji'>
+<view class='shou'>售 {{item.shou}}</view>
+<view class='shou zu'>租 {{item.zu}}</view>
+</view></view>
+<view class='middleman_icon'>
+<span class="iconfont icon-kongjian-" bindtap='middleman_del'></span>
+</view>
+</view>
+</view>
+<view class='jinjiren'  wx:for='{{middlemanlist}}' wx:key='unique'>
+<view class='bumen'><text>所在部门：{{item.partment}}</text></view>
+<view class='pingfen'>
+<text>综合评分：</text>
+<view class='xin1'><span class="iconfont icon--"></span></view>
+<view class='xin1'><span class="iconfont icon--"></span></view>
+<view class='xin1'><span class="iconfont icon--"></span></view>
+<view class='xin1'><span class="iconfont icon--"></span></view>
+<view class='xin1'><span class="iconfont icon--"></span></view>
+</view>
+</view>
+</view>
+
+<view class='showdata'>
+<view class='tuijian'>
+<view wx:for='{{navbar}}' class="{{selected==index?'hidden':'show'}}" data-index='{{index}}' bindtap="selected" wx:key='unique'>
+<view class='ershou'>{{item}}</view>
+<!--<view class='new'>新房</view>-->
+</view>
+
+</view>
+<!--推荐房源列表-->
+<!--2019年6月11日09:46:12
+实现：
+列表数据渲染-->
+<view wx:if="{{selected == 0}}">
+<view class='tuijian_zong' wx:for="{{prolist}}" wx:key="unique">
+<view class='tuijian_left'  bindtap='details'>
+<image src='{{item.tuijian_left}}'></image>
+</view>
+<view class='biaozhi'>此数据为模拟数据</view>
+<view class='leixing'>{{item.lei}}</view>
+<view class='xing'></view>
+<view class='tuijian_right' bindtap='details'>
+ <view class='address'>{{item.adress}}
+ </view>
+ <view class='mianji'>
+ <view class='mj'>{{item.mianji}}</view>
+ <view class='mj hu'>{{item.hu}}</view>
+</view>
+ <view class='tedian'>
+ <view class='tedia'>{{item.tedian}}</view>
+ <view class='tedia ted'>{{item.lei}}</view>
+ <view class='tedia te ted'>{{item.te}}</view>
+ </view>
+ <view class='salary'><span class="iconfont icon-zujin"></span><text class='sala'>{{filters.toFix(item.salary,2)}} </text><text class='money'>元/月</text></view>
+</view>
+</view>
+</view>
+<!--一手房数据列表渲染-->
+<view wx:if="{{selected ==1}}">
+<view class='tuijian_zong' wx:for="{{newlist}}" wx:key="unique">
+<view class='tuijian_left'  bindtap='detail'>
+<image src='{{item.tuijian_left}}'></image>
+</view>
+<view class='biaozhi'>此数据为模拟数据</view>
+<view class='leixing'>{{item.lei}}</view>
+<view class='xing'></view>
+<view class='tuijian_right' bindtap='detail'>
+ <view class='address'>{{item.adress}}</view>
+ <view class='mianji'>
+ <view class='mj'>{{item.mianji}}</view>
+ <view class='mj hu'>{{item.hu}}</view>
+</view>
+ <view class='tedian'>
+ <view class='tedia'>{{item.tedian}}</view>
+ <view class='tedia ted'>{{item.lei}}</view>
+ <view class='tedia te ted'>{{item.te}}</view>
+ </view>
+ <view class='salary'><span class="iconfont icon-zujin"></span><text class='sala'>{{filters.toFix(item.salary,2)}} </text><text class='money'>元/㎡</text></view>
+</view>
+</view>
+</view>
+<!--二手房数据列表渲染-->
+<!--2019年6月19日10:32:22
+实现：二手房房源数据展示-->
+<view wx:if="{{selected ==2}}">
+<view class='tuijian_zong' wx:for="{{newlist}}" wx:key="unique">
+<view class='tuijian_left'  bindtap='detail'>
+<image src='{{item.tuijian_left}}'></image>
+</view>
+<view class='biaozhi'>此数据为模拟数据</view>
+<view class='leixing'>{{item.lei}}</view>
+<view class='xing'></view>
+<view class='tuijian_right' bindtap='detail'>
+ <view class='address'>{{item.adress}}</view>
+ <view class='mianji'>
+ <view class='mj'>{{item.mianji}}</view>
+ <view class='mj hu'>{{item.hu}}</view>
+</view>
+ <view class='tedian'>
+ <view class='tedia'>{{item.tedian}}</view>
+ <view class='tedia ted'>{{item.lei}}</view>
+ <view class='tedia te ted'>{{item.te}}</view>
+ </view>
+ <view class='salary'><span class="iconfont icon-zujin"></span><text class='sala'>{{filters.toFix(item.salary,2)}} </text><text class='money'>元/㎡</text></view>
+</view>
+</view>
+</view>
+</view>

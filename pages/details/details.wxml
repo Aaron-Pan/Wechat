@@ -1,0 +1,95 @@
+<!--pages/details/details.wxml-->
+<!--slider-->
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+  <block wx:for="{{imgArr}}" wx:key="index">
+    <swiper-item>
+      <image class='slide' src="{{item}}" bindtap='previewImg' data-index='{{index}}'></image>
+    <view class='idx'><text>{{index+1}}/{{imgArr.length}}</text></view>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 2019年6月19日11:01:55 -->
+<!-- 具体位置详情 -->
+<view class='dizhi'>
+<text class='title'>{{tit}}</text>
+<span class="iconfont icon-fangyuan_zaishou"></span>
+<text class='other_name'>项目：{{other_name}}</text>
+<view>
+<text class='raduce' style='background:#FCF1DF;color:#F0C07D;'>{{other[0]}}</text>
+<text class='raduce' style='background:#FCE4E0;color:#FE7F78'>{{other[1]}}</text>
+<text class='raduce' style='background:#E3F3FD;color:#72B9F6'>{{other[2]}}</text>
+</view>
+<text class='other_name'>项目均价：<text style='color:orangered'>{{prices}}</text></text>
+<text class='other_name'>物业类型：<text style='color:black'>{{leixing}}</text></text>
+<text class='other_name'>项目地址：<text style='color:black'>{{xiangmu}}</text></text>
+</view>
+
+<!-- 户型图 -->
+<view class='huxing'>
+
+<view class='huxing-xq'>
+   <view class='hx-img'><image src='http://pic2.to8to.com/home/a6/b1/a6b103eade4ff7f146ada6200a445c08_s.jpg' bindtap='previewHuxingImg'></image></view>
+   <view class='hx-raduce'>
+   <text style='font-size:30rpx;display:block'>{{huxing}}</text>
+   <text style='font-size:25rpx;color:#9F9F9F;display:block'>{{fangxiang}}</text>
+   <text style='color:orangered;font-size:28rpx; margin-right:20rpx'>{{pri}}</text>
+   <text style='color:#9F9F9F;font-size:25rpx;'>参考价</text>
+   </view>
+</view>
+</view>
+
+
+<!-- 项目参数 -->
+<!-- 2019年6月19日11:57:38 -->
+<view class='dizhi1' style='margin-top:20rpx'>
+<text class='title'>房源参数</text>
+<text class='other_name'>开发商：<text style='color:black'>{{kfs}}</text></text>
+<text class='other_name'>物业公司：<text style='color:black'>{{wygs}}</text></text>
+<text class='other_name'>建筑类型：<text style='color:black'>{{jzlx}}</text></text>
+<text class='other_name1'>开盘日期：<text style='color:black'>{{kprq}}</text></text>
+<text class='other_name1'>交楼日期：<text style='color:black'>{{jlrq}}</text></text>
+<text class='other_name1'>产权年限：<text style='color:black'>{{cqnx}}</text></text>
+<text class='other_name1'>占地面积：<text style='color:black'>{{zdmj}}</text></text>
+<text class='other_name1'>容 积 率 ：<text style='color:black'>{{rjl}}</text></text>
+<text class='other_name1'>绿 化 率 ：<text style='color:black'>{{lhl}}</text></text>
+<text class='other_name1'>物业作数：<text style='color:black'>{{wyzs}}</text></text>
+<text class='other_name1'>车位总数：<text style='color:black'>{{zwzs}}</text></text>
+</view>
+
+<!-- 项目简介 -->
+<view class="xmjj {{ellipsis?'ellipsis':'unellipsis'}}"  style='margin-top:20rpx;'>
+<text class='title'>房源描述</text>
+<view class="context"><text >{{jianjie}}</text></view>
+ <view bindtap='ellipsis' class='show'>
+ <image class='img-ellipsis' src="{{ellipsis?'../zufang_detail/image/ellipsis.png':'../zufang_detail/image/unellipsis.png'}}"></image>
+ </view>
+</view>
+
+<!-- 位置与周边 -->
+
+<view class='xmj' style='margin-top:20rpx;'>
+<span class="iconfont icon-weizhi1"></span>
+<text class='title'> 位置与周边</text>
+<text class='clickmap' style='font-size:24rpx;'>(点地图)</text>
+<view class='ditu'>
+<!-- map.wxml -->
+<image bindtap='getLocation' src='../index/pic/map.png'></image>
+</view>
+</view>
+<!--房源数据推荐位置-->
+
+
+
+
+<!-- 电话联系以及收藏 
+2019年6月19日15:05:11
+-->
+
+<view class='last'>
+<view class="shoucang" bindtap='shoucang'>
+<view class='xin' style="background-image:url('{{bac}}')"></view>
+<text class='sc'>{{soucang}}</text>
+</view>
+<view class='phone iconfont icon-dianhua-copy' bindtap='details'> 电话联系</view>
+</view>
